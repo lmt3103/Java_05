@@ -5,6 +5,10 @@ public class IsPositiveNumber {
     и возвращает false, если параметр меньше 0.
      */
     public boolean IsPositiveNumber(int number){
+        //return number >= 0 ? true : false;
+        //return number >= 0;
+
+
         if (number >= 0) {
 
             return true;

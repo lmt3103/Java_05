@@ -36,6 +36,22 @@ public class MinMaxAveTest {
     }
 
     @Test
+    public void testMinMaxAveNullAandB_HappyPath(){
+        //AAA
+        //arrange
+        int[] array = new  int[]{1};
+        int a = 0;
+        int b = 0;
+        int[] expectedResult = {};
+
+        //act
+        int[] actualResult = new MinMaxAve().MinMaxAve(array,a,b);
+
+        //Assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
     public void testMinMaxAveNull_HappyPath(){
         //AAA
         //arrange

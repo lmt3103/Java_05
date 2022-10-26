@@ -6,12 +6,12 @@ public class MinMaxAve {
     максимальное значение,  и среднее среди всех значений между 2-мя индексами.
      */
     public int[] MinMaxAve(int[] array, int a, int b){
-        if (a >= 0 && b >= 0 && b >= a && b < array.length) {
+        if (array!= null && array.length > 1 && a >= 0 && b >= 0 && b >= a && b < array.length) {
             int[] arrNew = new int[3];
             int max = array[a];
             int min = array[a];
             int sum = 0;
-            int count = 0;
+
 
             for (int i = a; i <= b; i++) {
                 if (max >= array[i]) {
@@ -21,13 +21,12 @@ public class MinMaxAve {
                     max = array[i];
                     min = min;
                 }
+                sum = sum + array[i];
+
             }
 
-            for (int i = a; i <= b; i++) {
-                sum = sum + array[i];
-                count++;
-            }
-            sum = sum / count;
+
+            sum = sum / (b - a + 1);
 
             arrNew[0] = min;
             arrNew[1] = max;

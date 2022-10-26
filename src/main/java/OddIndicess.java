@@ -9,6 +9,7 @@ public class OddIndicess {
     public int[] OddIndices(int[] array) {
         if (array.length > 0) {
             // вычисляем длинну массива нечетных элементов
+            // можно посчитать длину массива, как длину поделить на 2
             int s = new Utils().countNechetArray(array);
             int[] arrResult = new int[s];
             int count = 0;

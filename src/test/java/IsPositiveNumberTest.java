@@ -17,6 +17,19 @@ public class IsPositiveNumberTest {
     }
 
     @Test
+    public void testPositiveMax_HappyPath() {
+        //Arrange
+        int number = Integer.MAX_VALUE;
+        boolean expectedRezult = true;
+
+        //Act
+        boolean actualRezult = new IsPositiveNumber().IsPositiveNumber(number);
+
+        //Assert
+        Assert.assertEquals(actualRezult, expectedRezult);
+    }
+
+    @Test
     public void testNegative_HappyPath() {
         //Arrange
         int number = -555;
